@@ -1,4 +1,3 @@
-
 name: Workflow Simple Bonjour
 
 on:
@@ -8,15 +7,13 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch: # Permet de lancer manuellement le workflow
+  workflow_dispatch:  # Ajout de cette ligne pour permettre le lancement manuel
 
 jobs:
   display-message:
     runs-on: ubuntu-latest
-
     steps:
       - name: Récupérer le code
         uses: actions/checkout@v3
-
-      - name: Afficher un message
+      - name: Afficher un message simple
         run: echo "Bonjour, Workflow !"
